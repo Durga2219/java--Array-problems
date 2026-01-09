@@ -1,0 +1,26 @@
+class Solution {
+    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+        int[] ans = new int[nums1.length];
+        int n1 = nums1.length;
+        int n2 = nums2.length;
+        for(int i = 0; i < n1; i++){
+            int foundIndexInNums2 = -1;
+            for(int j = 0; j < n2; j++){
+                if(nums1[i] == nums2[j]){
+                    foundIndexInNums2 = j;
+                    break;
+                }
+            }
+            int nextGreater = -1;
+            for(int k = foundIndexInNums2 + 1; k < n2; k++){
+                if(nums2[k] > nums1[i]){
+                    nextGreater = nums2[k];
+                    break;
+                }
+            }
+            ans[i] = nextGreater;
+        }
+        return ans;
+        
+    }
+}
