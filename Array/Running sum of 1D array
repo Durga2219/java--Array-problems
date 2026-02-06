@@ -6,5 +6,5 @@ class Solution {
             result[i] = nums[i]+result[i-1];
         }
         return result;
-        }   
-    }
+}
+}
