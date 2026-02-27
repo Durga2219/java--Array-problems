@@ -1,5 +1,5 @@
 class Solution {
-    public int missingNumber(int[] nums) {
+    public int missingNumber(int[] nums){
         int expect = 0, actual = 0;
         int n = nums.length;
         expect = n * (n+1)/2;
